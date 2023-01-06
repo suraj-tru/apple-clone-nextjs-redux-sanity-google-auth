@@ -1,6 +1,6 @@
 # Sanity as Backend + Next.js frontend + Redux Toolkit(state management) NextAuth(Google Authentication)
 
-DEMO 👉 https://example-frontend-next-js.sanity-io.now.sh
+DEMO 👉 https://apple-clone-nextjs-redux-sanity-google-auth-n3bt864a3-suraj-tru.vercel.app/
 
 This is an example [Sanity](https://www.sanity.io/) powered frontend for the movie dataset using [Next.js](https://github.com/zeit/next.js/).
 
