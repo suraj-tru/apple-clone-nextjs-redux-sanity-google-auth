@@ -1,27 +1,48 @@
-# Next.js + Tailwind CSS Example
+# Sanity as Backend + Next.js frontend + Redux Toolkit(state management) NextAuth(Google Authentication)
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+DEMO 👉 https://example-frontend-next-js.sanity-io.now.sh
 
-## Deploy your own
+This is an example [Sanity](https://www.sanity.io/) powered frontend for the movie dataset using [Next.js](https://github.com/zeit/next.js/).
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+## Prerequisites
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+You will need [Node.js](https://nodejs.org) installed on your system.
 
-## How to use
+## Setup
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+Get the code by either cloning this repository using git
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+```
+git clone https://github.com/suraj-tru/apple-clone-nextjs-redux-sanity-google-auth
 ```
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+... or [downloading source code](https://github.com/suraj-tru/apple-clone-nextjs-redux-sanity-google-auth/archive/master.zip) code as a zip archive.
+
+Once downloaded, open the terminal in the project directory, and install dependencies with:
+
+```
+npm install
 ```
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+If you're running your own Sanity project with the example movie dataset, go to `lib/sanity.js` and change the following lines:
+
+```
+  projectId: 'YOUR_PROJECT_ID',
+  dataset: 'NAME_OF_YOUR_DATASET',
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+You can locate the ID of your project in the header of the [management page for your project](https://manage.sanity.io/).
+
+You also need to enable `localhost:3000` in your CORS Origins settings! Either through the [management page](https://manage.sanity.io/) under `settings` or by running the below in the project folder you set up with `sanity init`:
+
+```
+sanity cors add http://localhost:3000
+```
+
+Then start the example app with:
+
+```
+npm run dev
+```
+
+The app should now be up and running at http://localhost:3000 🚀
